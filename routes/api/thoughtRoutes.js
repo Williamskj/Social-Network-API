@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Thought } = require('../models');
+const { User, Thought } = require('../../models');
 
 router.get('/', (req, res) => {
     Thought.find()
@@ -80,16 +80,16 @@ router.post('/:thoughtId/reactions', (req, res) => {
 
 router.delete('/:thoughtId/reactions/:reactionId', (req, res) => {
     Thought.findOneAndUpdate(
-        {_id: req.params.thoughtId},
-        {$pull: {reactions:{_id: req.params.reactionId} }}
+        { _id: req.params.thoughtId },
+        { $pull: { reactions: { _id: req.params.reactionId } } }
     )
-    .then((thought) => 
-        !thought ? res.status(404).json({ message: 'No thought with given ID found' }) : res.json(thought.reactions) 
-    )
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+        .then((thought) =>
+            !thought ? res.status(404).json({ message: 'No thought with given ID found' }) : res.json(thought.reactions)
+        )
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        })
 })
 
 module.exports = router;

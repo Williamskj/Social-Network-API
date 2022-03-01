@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     User.create(req.body)
         .then((userData) => {
-            console.log(userData)
             res.json(userData)
         })
         .catch((err) => res.status(500).json(err))
@@ -89,5 +88,5 @@ router.delete('/:userId/friends/:friendId', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         })
-        
 })
+module.exports = router;

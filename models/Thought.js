@@ -22,7 +22,7 @@ const ReactionSchema = new Schema(
     }
 );
 
-reactionSchema.methods.getDate = function () {
+ReactionSchema.methods.getDate = function () {
     const myDate = new Date(this.createdAt)
     return `${myDate.getMonth()} - ${myDate.getDate()} - ${myDate.getYear()}`
 }
@@ -53,7 +53,7 @@ const ThoughtSchema = new Schema(
     }
 );
 
-thoughtSchema.methods.getDate = function () {
+ThoughtSchema.methods.getDate = function () {
     const myDate = new Date(this.createdAt)
     return `${myDate.getMonth()} - ${myDate.getDate()} - ${myDate.getYear()}`
 }
