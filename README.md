@@ -24,5 +24,5 @@ SO THAT my website can handle large amounts of unstructured data
 Williamskj
 
 ## VideoLink
-https://drive.google.com/file/d/1lwLh_45WB82Q4gvcieVGIA6xB2hh1Prh/view
-
+Part 1: https://drive.google.com/file/d/1lwLh_45WB82Q4gvcieVGIA6xB2hh1Prh/view
+Part 2: https://drive.google.com/file/d/1j1lhjWAsVwY2snqaOuG8XrXaA0Hm_lgX/view
